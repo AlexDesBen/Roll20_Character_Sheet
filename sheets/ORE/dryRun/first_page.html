@@ -1,0 +1,477 @@
+
+<div class="sheet-tab-content sheet-tab1">
+   <div class="row">
+      <div class="col">Character Name:</div>
+      <div class="col"><input type="text" name="attr_character_name" /></div>
+      <div class="col">Super Identity:</div>
+      <div class="col"><input type="text" name="attr_si" /></div>
+   </div>
+   <!--div>
+      <div class="tr">
+         <div class="td"></div>
+         <div class="td">Total Points:</div><div class="td"><input type="number"  min="1" name="attr_tp" /></div>
+         <div class="td">Loyalty:</div><div class="td"><input type="number"  min="0" max="1000" name="attr_loyalty" /></div>
+         <div class="td">Base Will:</div><div class="td"><input type="number"  min="0" max="1000" name="attr_basewill" value="@{charmdice} + @{charmhard} + @{charmwiggle} + @{charmhyper} + @{charmhhard} + @{charmhwiggle} + @{commdice} + @{commhard} + @{commwiggle} + @{commhyper} + @{commhhard} + @{commhwiggle}" disabled="true" /></div>
+         <div class="col">Willpower:</div><div class="td"><input type="number"  min="0" max="1000" name="attr_willpower" /></div>
+      </div>
+      <div class="tr">
+         <div class="td"></div>
+         <div class="td">Spent Points:</div><div class="td"><input type="number" name="attr_sp" value="(@{basics} + @{statstotal} + @{skillstotal} + @{pwrtotal})" disabled="true"/></div>
+         <div class="td">Passion:</div><div class="td"><input type="number"  min="0" max="1000" name="attr_passion" /></div>
+         <div class="td">Bonus:</div> <div class="td"><input type="number"  min="0" max="1000" name="attr_bbasewill" value="0" /></div>
+         <div class="td">Bonus:</div> <div class="td"><input type="number"  min="0" max="1000" name="attr_bwillpower" value="0" /></div>
+      </div>
+   </div-->
+<div>
+    
+<div class="stats">
+    <div class="tr">
+		<div class="td">
+			<h4>Stats</h4>
+		</div>
+		<div class="td">
+			<h4>Dice</h4>
+		</div>
+		<div class="td">
+			<h4>Hard </h4>
+		</div>
+		<div class="td">
+			<h4>Wiggle</h4>
+		</div>
+		<div class="td">
+			<h4>Hyper</h4>
+		</div>
+		<div class="td">
+			<h4>H Hard</h4>
+		</div>
+		<div class="td">
+			<h4>H Wiggle</h4>
+		</div>
+		<div class="td">
+			<h4></h4>
+		</div>
+		<div class="td">
+			<h4>Amounts</h4>
+		</div>
+		<div class="td">
+			<h4></h4>
+		</div>
+		<div class="td">
+			<h4>Cost</h4>
+		</div>
+		<div class="td">
+			<h4>Roll</h4>
+		</div>
+	</div>
+	<div class="tr">
+		<div class="td">Body</div>
+		<div class="td">
+			<input type="number" name="attr_bodydice" value="0" />
+		</div>
+		<div class="td">
+			<input type="number" name="attr_bodyhard" value="0" />
+		</div>
+		<div class="td">
+			<input type="number" name="attr_bodywiggle" value="0" />
+		</div>
+		<div class="td">
+			<input type="number" name="attr_bodyhyper" value="0" />
+		</div>
+		<div class="td">
+			<input type="number" name="attr_bodyhhard" value="0" />
+		</div>
+		<div class="td">
+			<input type="number" name="attr_bodyhwiggle" value="0" />
+		</div>
+		<div class="td">
+			<input type="number" style="width:37px" name="attr_bodyamount" value="(@{bodydice} + @{bodyhyper})" disabled="true" />D
+           
+		</div>
+		<div class="td">
+			<input type="number" style="width:37px" name="attr_bodyhamount" value="(@{bodyhard} + @{bodyhhard})" disabled="true" />HD
+           
+		</div>
+		<div class="td">
+			<input type="number" style="width:37px" name="attr_bodywamount" value="(@{bodywiggle} + @{bodyhwiggle})" disabled="true" />WD
+           
+		</div>
+		<div class="td">
+			<input type="number" name="attr_bodycost" value="@{bodydice}*5 + @{bodyhard}*10 + @{bodywiggle}*20 + @{bodyhyper}*4 + @{bodyhhard}*8 + @{bodyhwiggle}*16" disabled="true" />
+		</div>
+		<div class="td">
+			<button type="roll" name="roll_bodyoutput" value="/roll (@{bodydice} + @{bodyhyper})d10mtsd"></button>
+		</div>
+	</div>
+	<div class="tr">
+		<div class="td">
+		Coordination
+		</div>
+		<div class="td">
+			<input type="number" name="attr_coorddice" value="0" />
+		</div>
+		<div class="td">
+			<input type="number" name="attr_coordhard" value="0" />
+		</div>
+		<div class="td">
+			<input type="number" name="attr_coordwiggle" value="0" />
+		</div>
+		<div class="td">
+			<input type="number" name="attr_coordhyper" value="0" />
+		</div>
+		<div class="td">
+			<input type="number" name="attr_coordhhard" value="0"/>
+		</div>
+		<div class="td">
+			<input type="number" name="attr_coordhwiggle" value="0" />
+		</div>
+		<div class="td">
+			<input type="number" style="width:37px" name="attr_coordamount" value="(@{coorddice} + @{coordhyper})" disabled="true" />D
+           
+		</div>
+		<div class="td">
+			<input type="number" style="width:37px" name="attr_coordhamount" value="(@{coordhard} + @{coordhhard})" disabled="true" />HD
+           
+		</div>
+		<div class="td">
+			<input type="number" style="width:37px" name="attr_coordwamount" value="(@{coordwiggle} + @{coordhwiggle})" disabled="true" />WD
+           
+		</div>
+		<div class="td">
+			<input type="number" name="attr_coordcost" value="@{coorddice}*5 + @{coordhard}*10 + @{coordwiggle}*20 + @{coordhyper}*4 + @{coordhhard}*8 + @{coordhwiggle}*16" disabled="true" />
+		</div>
+		<div class="td">
+			<button type="roll" name="roll_coordoutput" value="/roll (@{coorddice} + @{coordhyper})d10mtsd"></button>
+
+		</div>
+	</div>
+	<div class="tr">
+		<div class="td">
+		   Sense
+		</div>
+		<div class="td">
+			<input type="number" name="attr_sensedice" value="0" />
+		</div>
+		<div class="td">
+			<input type="number" name="attr_sensehard" value="0" />
+		</div>
+		<div class="td">
+			<input type="number" name="attr_sensewiggle" value="0" />
+		</div>
+		<div class="td">
+			<input type="number" name="attr_sensehyper" value="0" />
+		</div>
+		<div class="td">
+			<input type="number" name="attr_sensehhard" value="0" />
+		</div>
+		<div class="td">
+			<input type="number" name="attr_sensehwiggle" value="0" />
+		</div>
+		<div class="td">
+			<input type="number" style="width:37px" name="attr_senseamount" value="(@{sensedice} + @{sensehyper})" disabled="true" />D
+           
+		</div>
+		<div class="td">
+			<input type="number" style="width:37px" name="attr_sensehamount" value="(@{sensehard} + @{sensehhard})" disabled="true" />HD
+           
+		</div>
+		<div class="td">
+			<input type="number" style="width:37px" name="attr_sensewamount" value="(@{sensewiggle} + @{sensehwiggle})" disabled="true" />WD
+           
+		</div>
+		<div class="td">
+			<input type="number" name="attr_sensecost" value="@{sensedice}*5 + @{sensehard}*10 + @{sensewiggle}*20 + @{sensehyper}*4 + @{sensehhard}*8 + @{sensehwiggle}*16" disabled="true" />
+		</div>
+		<div class="td">
+
+			<button type="roll" name="roll_senseoutput" value="/roll (@{sensedice} + @{sensehyper})d10mtsd"></button>
+
+		</div>
+	</div>
+	<div class="tr">
+		<div class="td">
+		   Mind
+		</div>
+		<div class="td">
+			<input type="number" name="attr_minddice" value="0" />
+		</div>
+		<div class="td">
+			<input type="number" name="attr_mindhard" value="0" />
+		</div>
+		<div class="td">
+			<input type="number" name="attr_mindwiggle" value="0" />
+		</div>
+		<div class="td">
+			<input type="number" name="attr_mindhyper" value="0" />
+		</div>
+		<div class="td">
+			<input type="number" name="attr_mindhhard" value="0" />
+		</div>
+		<div class="td">
+			<input type="number" name="attr_mindhwiggle" value="0" />
+		</div>
+		<div class="td">
+			<input type="number" style="width:37px" name="attr_mindamount" value="(@{minddice} + @{mindhyper})" disabled="true" />D
+           
+		</div>
+		<div class="td">
+			<input type="number" style="width:37px" name="attr_mindhamount" value="(@{mindhard} + @{mindhhard})" disabled="true" />HD
+           
+		</div>
+		<div class="td">
+			<input type="number" style="width:37px" name="attr_mindwamount" value="(@{mindwiggle} + @{mindhwiggle})" disabled="true" />WD
+           
+		</div>
+		<div class="td">
+			<input type="number" name="attr_mindcost" value="@{minddice}*5 + @{mindhard}*10 + @{mindwiggle}*20 + @{mindhyper}*4 + @{mindhhard}*8 + @{mindhwiggle}*16" disabled="true" />
+		</div>
+		<div class="td">
+			<button type="roll" name="roll_mindoutput" value="/roll (@{minddice} + @{mindhyper})d10mtsd"></button>
+
+		</div>
+	</div>
+	<div class="tr">
+		<div class="td">
+		   Charm
+		</div>
+		<div class="td">
+			<input type="number" name="attr_charmdice" value="0" />
+		</div>
+		<div class="td">
+			<input type="number" name="attr_charmhard" value="0" />
+		</div>
+		<div class="td">
+			<input type="number" name="attr_charmwiggle" value="0" />
+		</div>
+		<div class="td">
+			<input type="number" name="attr_charmhyper" value="0" />
+		</div>
+		<div class="td">
+			<input type="number" name="attr_charmhhard" value="0" />
+		</div>
+		<div class="td">
+			<input type="number" name="attr_charmhwiggle" value="0" />
+		</div>
+		<div class="td">
+			<input type="number" style="width:37px" name="attr_charmamount" value="(@{charmdice} + @{charmhyper})" disabled="true" />D
+           
+		</div>
+		<div class="td">
+			<input type="number" style="width:37px" name="attr_charmhamount" value="(@{charmhard} + @{charmhhard})" disabled="true" />HD
+           
+		</div>
+		<div class="td">
+			<input type="number" style="width:37px" name="attr_charmwamount" value="(@{charmwiggle} + @{charmhwiggle})" disabled="true" />WD
+           
+		</div>
+		<div class="td">
+			<input type="number" name="attr_charmcost" value="@{charmdice}*5 + @{charmhard}*10 + @{charmwiggle}*20 + @{charmhyper}*4 + @{charmhhard}*8 + @{charmhwiggle}*16" disabled="true" />
+		</div>
+		<div class="td">
+			<button type="roll" name="roll_charmoutput" value="/roll (@{charmdice} + @{charmhyper})d10mtsd"></button>
+
+		</div>
+	</div>
+	<div class="tr">
+		<div class="td">
+		   Command
+		</div>
+		<div class="td">
+			<input type="number" name="attr_commdice" value="0" />
+		</div>
+		<div class="td">
+			<input type="number" name="attr_commhard" value="0" />
+		</div>
+		<div class="td">
+			<input type="number" name="attr_commwiggle" value="0" />
+		</div>
+		<div class="td">
+			<input type="number" name="attr_commhyper" value="0" />
+		</div>
+		<div class="td">
+			<input type="number" name="attr_commhhard" value="0" />
+		</div>
+		<div class="td">
+			<input type="number" name="attr_commhwiggle" value="0" />
+		</div>
+		<div class="td">
+			<input type="number" style="width:37px" name="attr_commamount" value="(@{commdice} + @{commhyper})" disabled="true" />D           
+		</div>
+		<div class="td">
+			<input type="number" style="width:37px" name="attr_commhamount" value="(@{commhard} + @{commhhard})" disabled="true" />HD           
+		</div>
+		<div class="td">
+			<input type="number" style="width:37px" name="attr_commwamount" value="(@{commwiggle} + @{commhwiggle})" disabled="true" />WD           
+		</div>
+		<div class="td">
+			<input type="number" name="attr_commcost" value="@{commdice}*5 + @{commhard}*10 + @{commwiggle}*20 + @{commhyper}*4 + @{commhhard}*8 + @{commhwiggle}*16" disabled="true" />
+		</div>
+		<div class="td">
+
+			<button type="roll" name="roll_commoutput" value="/roll (@{commdice} + @{commhyper})d10mtsd"></button>
+
+		</div>
+	</div>
+</div>
+         
+         
+        </div>
+        
+                <!--This div contains Hit Locations-->
+<div class="Hit Locations">
+                        <div class="tr">
+                    <div class="td"><h4>Hit Locations</h4></div>
+                    <div class="td"><h4>Heights</h4></div>
+                    <div class="td"><h4>Wound Boxes</h4></div>
+</div>
+</div>
+<div>
+<div class="tr"><div class="td"><h6>Head</h6></div>
+<div class="headheight">
+<div class="td"><h6>10</h6></div>
+</div>
+<div class="td"> 
+<input type="text" style="width:25px" name="attr_headwound1" maxlength="1" value="" />
+</div>
+<div class="td">
+<input type="text" style="width:25px" name="attr_headwound2"  maxlength="1" value="" />
+</div>
+<div class="td">
+<input type="text" style="width:25px" name="attr_headwound3"  maxlength="1" value="" />
+</div>
+<div class="td">
+<input type="text" style="width:25px" name="attr_headwound4"  maxlength="1" value="" />
+</div>
+</div>
+<div class="tr"><div class="td"><h6>Torso</h6></div>
+<div class="torsoheight">
+<div class="td"><h6>7, 8, 9</h6></div>
+</div>
+<div class="td"> 
+<input type="text" style="width:25px" name="attr_torsowound1"  maxlength="1" value="" />
+</div>
+<div class="td">
+<input type="text" style="width:25px" name="attr_torsowound2"  maxlength="1" value="" />
+</div>
+<div class="td">
+<input type="text" style="width:25px" name="attr_torsowound3"  maxlength="1" value="" />
+</div>
+<div class="td">
+<input type="text" style="width:25px" name="attr_torsowound4"  maxlength="1" value="" />
+</div>
+<div class="td">
+<input type="text" style="width:25px" name="attr_torsowound5"  maxlength="1" value="" />
+</div>
+<div class="td">
+<input type="text" style="width:25px" name="attr_torsowound6"  maxlength="1" value="" />
+</div>
+<div class="td">
+<input type="text" style="width:25px" name="attr_torsowound7"  maxlength="1" value="" />
+</div>
+<div class="td">
+<input type="text" style="width:25px" name="attr_torsowound8"  maxlength="1" value="" />
+</div>
+<div class="td">
+<input type="text" style="width:25px" name="attr_torsowound9"  maxlength="1" value="" />
+</div>
+<div class="td">
+<input type="text" style="width:25px" name="attr_torsowound10"  maxlength="1" value="" />
+</div>
+</div>
+<div class="tr"><div class="td"><h6>Right Arm</h6></div>
+<div class="rarmheight">
+<div class="td"><h6>5, 6</h6></div>
+</div>
+<div class="td"> 
+<input type="text" style="width:25px" name="attr_rightarmwound1"  maxlength="1" value="" />
+</div>
+<div class="td">
+<input type="text" style="width:25px" name="attr_rightarmwound2"  maxlength="1" value="" />
+</div>
+<div class="td">
+<input type="text" style="width:25px" name="attr_rightarmwound3"  maxlength="1" value="" />
+</div>
+<div class="td">
+<input type="text" style="width:25px" name="attr_rightarmwound4"  maxlength="1" value="" />
+</div>
+<div class="td">
+<input type="text" style="width:25px" name="attr_rightarmwound5"  maxlength="1" value="" />
+</div>
+</div>
+<div class="tr"><div class="td"><h6>Left Arm</h6></div>
+<div class="larmheight">
+<div class="td"><h6>3, 4</h6></div>
+</div>
+<div class="td">
+<input type="text" style="width:25px" name="attr_leftarmwound1"  maxlength="1" value="" />
+</div>
+<div class="td">
+<input type="text" style="width:25px" name="attr_leftarmwound2"  maxlength="1" value="" />
+</div>
+<div class="td">
+<input type="text" style="width:25px" name="attr_leftarmwound3"  maxlength="1" value="" />
+</div>
+<div class="td">
+<input type="text" style="width:25px" name="attr_leftarmwound4"  maxlength="1" value="" />
+</div>
+<div class="td">
+<input type="text" style="width:25px" name="attr_leftarmwound5"  maxlength="1" value="" />
+</div>
+</div>
+<div class="tr"><div class="td"><h6>Right Leg</h6></div>
+<div class="rlegheight">
+<div class="td"><h6>2</h6></div>
+</div>
+<div class="td"> 
+<input type="text" style="width:25px" name="attr_rightlegwound1"  maxlength="1" value="" />
+</div>
+<div class="td">
+<input type="text" style="width:25px" name="attr_rightlegwound2"  maxlength="1" value="" />
+</div>
+<div class="td">
+<input type="text" style="width:25px" name="attr_rightlegwound3"  maxlength="1" value="" />
+</div>
+<div class="td">
+<input type="text" style="width:25px" name="attr_rightlegwound4"  maxlength="1" value="" />
+</div>
+<div class="td">
+<input type="text" style="width:25px" name="attr_rightlegwound5"  maxlength="1" value="" />
+</div>
+</div>
+<div class="tr"><div class="td"><h6>Left Leg</h6></div>
+<div class="llegheight">
+<div class="td"><h6>1</h6></div>
+</div>
+<div class="td">
+<input type="text" style="width:25px" name="attr_leftlegwound1"  maxlength="1" value="" />
+</div>
+<div class="td">
+<input type="text" style="width:25px" name="attr_leftlegwound2"  maxlength="1" value="" />
+</div>
+<div class="td">
+<input type="text" style="width:25px" name="attr_leftlegwound3"  maxlength="1" value="" />
+</div>
+<div class="td">
+<input type="text" style="width:25px" name="attr_leftlegwound4"  maxlength="1" value="" />
+</div>
+<div class="td">
+<input type="text" style="width:25px" name="attr_leftlegwound5"  maxlength="1" value="" />
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>

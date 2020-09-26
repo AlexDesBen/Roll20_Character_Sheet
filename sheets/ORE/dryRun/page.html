@@ -1,0 +1,26 @@
+<h4 class="sheet-title" align="center">
+	Wild Talents
+</h4>
+<input type="radio" name="attr_tab" class="sheet-tab sheet-tab1" value="1" checked="checked"><span title="Stat"></span>
+<input type="radio" name="attr_tab" class="sheet-tab sheet-tab2" value="2"><span title="Skill"></span>
+<input type="radio" name="attr_tab" class="sheet-tab sheet-tab3" value="3"><span title="Power"></span>
+<input type="radio" name="attr_tab" class="sheet-tab sheet-tab4" value="4"><span title="Bio"></span>
+<input type="radio" name="attr_tab" class="sheet-tab sheet-tab5" value="5"><span title="Inventory"></span>
+
+<!--This div contains base character information-->
+<!--######################################################################-->
+
+<div id="stat_section"></div>
+<div id="skill_section"></div>
+<div id="power_section"></div>
+<div id="bio_section"></div>
+<div id="inventory_section"></div>
+
+
+
+<script>
+   $(function(){
+      $("#stat_section").load("ORE/dryRun/stat.html");
+      $("#skill_section").load("ORE/dryRun/skill.html");
+   });
+</script>
