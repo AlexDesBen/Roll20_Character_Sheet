@@ -16,8 +16,10 @@ much as possible and feel the have the random aspect in their hands. a Natural `
 from a player is treated as a `critical hit` from the attacking NPC while a `natural 20` is
 treated as a `fumble` from the attacking NPC.
 
-The character sheet is based on 
+The character sheet is 95% identical to the source linked here
 https://github.com/Roll20/roll20-character-sheets/blob/master/pathfinder_simple/pathfinder.html
+
+Modifications done here are specific to our house rules and the players custom needs.
 
 ### One Roll Engine
 Coming soon
