@@ -17,6 +17,7 @@ from a player is treated as a `critical hit` from the attacking NPC while a `nat
 treated as a `fumble` from the attacking NPC.
 
 The character sheet is based on 
+https://github.com/Roll20/roll20-character-sheets/blob/master/pathfinder_simple/pathfinder.html
 
 ### One Roll Engine
 Coming soon
