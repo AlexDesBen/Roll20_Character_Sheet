@@ -7,9 +7,11 @@ h4.sheet-title {
     border: 1px solid gray;
 }
 
-
 div {
-    padding:5px;
+    padding-right:6px;
+    padding-left:6px;
+    padding-top:1px;
+    padding-bottom:0px;
 }
 
 .sheet-tr {
@@ -98,12 +100,10 @@ input.sheet-tab5:checked ~ div.sheet-tab5,
 input.sheet-tab
 {
     width: 100px;
-    height: 26px;
+    height: 25px;
     position: relative;
-    top: 13px;
     cursor: pointer;
     margin-right: -100px;
-    margin-top: 0px;
     z-index: 1;
     opacity: 0;
 }
@@ -125,7 +125,7 @@ input.sheet-tab + span::before
     background: linear-gradient(to top, #c8c8c8, #fff, #c8c8c8);
     
     width: 100px;
-    height: 26px;
+    height: 25px;
     font-size: 18px;
     
     position: relative;
@@ -158,8 +158,15 @@ input.sheet-tab2 + span::before {
 
 
 input.sheet-tab2:checked + span::before {
+
+
 input.sheet-tab3 + span::before { left: 0px; }
+
+
+
+
 input.sheet-tab4 + span::before { left: 0px; }
+
 input.sheet-tab5 + span::before { left: 0px; }
 
 

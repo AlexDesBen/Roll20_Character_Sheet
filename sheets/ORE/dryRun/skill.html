@@ -1,1 +1,2239 @@
-<a>Hello World 2</a>
+<div class="skills">
+	<a><br></a>
+	<!-- SKILL HEADER -->
+	<div class="tr">
+		<div class="td" style="width: 100px"><b>Skill</b></div>
+		<div class="td"><b>Dice</b></div>
+		<div class="td"><b>Hard </b></div>
+		<div class="td"><b>Wiggle</b></div>
+		<div class="td"><b>Hyper</b></div>
+		<div class="td"><b>H Hard</b></div>
+		<div class="td"><b>H Wiggle</b></div>
+		<div class="td"><b></b></div>
+		<div class="td"><b>Amounts</b></div>
+		<div class="td"><b></b></div>
+		<div class="td"><b>Roll</b></div>
+		<div class="td"><b>Select</b></div>
+	</div>
+	<!-- Skill 1 -->
+	<!-- ############################## -->
+	<div class="tr">
+        <div class="td">
+            <input type="text"
+                name="attr_skillAname"
+                value=""
+                style="width: 100px">
+        </div>
+		<div class="td">
+			<input type="number" name="attr_skillAdice" value="0" />
+		</div>
+		<div class="td">
+			<input type="number" name="attr_skillAhard" value="0" />
+		</div>
+		<div class="td">
+			<input type="number" name="attr_skillAwiggle" value="0" />
+		</div>
+		<div class="td">
+			<input type="number" name="attr_skillAhyper" value="0" />
+		</div>
+		<div class="td">
+			<input type="number" name="attr_skillAhhard" value="0" />
+		</div>
+		<div class="td">
+			<input type="number" name="attr_skillAhwiggle" value="0" />
+		</div>
+		<div class="td">
+			<input type="number"
+				style="width:37px"
+				name="attr_skillAamount"
+				value="(@{skillAdice} + @{skillAhyper})"
+				disabled="true" />D
+		</div>
+		<div class="td">
+			<input type="number"
+				style="width:37px"
+				name="attr_skillAhamount"
+				value="(@{skillAhard} + @{skillAhhard})"
+				disabled="true" />HD
+		</div>
+		<div class="td">
+			<input type="number"
+				style="width:37px"
+				name="attr_skillAwamount"
+				value="(@{skillAwiggle} + @{skillAhwiggle})"
+				disabled="true" />WD
+		</div>
+		<div class="td">
+			<button type="roll"
+				name="roll_skillAoutput"
+				value="/roll (@{bodydice} + @{bodyhyper} + @{skillAdice} + @{skillAhyper})d10mtsd"
+				id="roll1"
+				onclick="rollskillA()">
+			</button>
+		</div>
+		<div class="td">
+			<input type="radio" name="attr_skillCheck" value="skillA" checked="checked">
+		</div>
+	</div>
+	<!-- Skill 2 -->
+	<!-- ############################## -->
+	<div class="tr">
+        <div class="td">
+            <input type="text"
+                name="attr_skillBname"
+                value=""
+                style="width: 100px">
+        </div>
+		<div class="td">
+			<input type="number" name="attr_skillBdice" value="0" />
+		</div>
+		<div class="td">
+			<input type="number" name="attr_skillBhard" value="0" />
+		</div>
+		<div class="td">
+			<input type="number" name="attr_skillBwiggle" value="0" />
+		</div>
+		<div class="td">
+			<input type="number" name="attr_skillBhyper" value="0" />
+		</div>
+		<div class="td">
+			<input type="number" name="attr_skillBhhard" value="0" />
+		</div>
+		<div class="td">
+			<input type="number" name="attr_skillBhwiggle" value="0" />
+		</div>
+		<div class="td">
+			<input type="number"
+				style="width:37px"
+				name="attr_skillBamount"
+				value="(@{skillBdice} + @{skillBhyper})"
+				disabled="true" />D
+		</div>
+		<div class="td">
+			<input type="number"
+				style="width:37px"
+				name="attr_skillBhamount"
+				value="(@{skillBhard} + @{skillBhhard})"
+				disabled="true" />HD
+		</div>
+		<div class="td">
+			<input type="number"
+				style="width:37px"
+				name="attr_skillBwamount"
+				value="(@{skillBwiggle} + @{skillBhwiggle})"
+				disabled="true" />WD
+		</div>
+		<div class="td">
+			<button type="roll"
+				name="roll_skillBoutput"
+				value="/roll (@{bodydice} + @{bodyhyper} + @{skillBdice} + @{skillBhyper})d10mtsd"
+				id="roll1"
+				onclick="rollskillB()">
+			</button>
+		</div>
+		<div class="td">
+			<input type="radio" name="attr_skillCheck" value="skillB" checked="checked">
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- restart here -->
+<!-- end here -->
+<div class="bodyskills">
+<div class="tr">
+<div class="td">
+<h3>Body Skills</h3>
+</div>
+</div>
+<div class="tr">
+                    <div class="td"><h4>Skill</h4></div>
+                    <div class="td"><h4>Dice</h4></div>
+                    <div class="td"><h4>Hard</h4></div>
+                    <div class="td"><h4>Wiggle</h4></div>
+                    <div class="td"><h4>Hyper</h4></div>
+                    <div class="td"><h4>H Hard</h4></div>
+                    <div class="td"><h4>H Wiggle</h4></div>
+                    <div class="td"><h4></h4></div>
+                    <div class="td"><h4>Amounts</h4></div>
+                    <div class="td"><h4></h4></div>
+                    <div class="td"><h4>Cost</h4></div>
+                    <div class="td"><h4>Roll</h4></div>
+</div>
+<div class="tr">
+               <div class="td">
+                   Athletics
+</div>
+              
+              <div class="td">
+                    <input type="number" name="attr_athdice" value="0" />
+</div>
+                         <div class="td">
+                    <input type="number" name="attr_athhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_athwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_athhyper" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_athhhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_athhwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_athamount" value="(@{athdice} + @{athhyper})" disabled="true" />D
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_athhamount" value="(@{athhard} + @{athhhard})" disabled="true" />HD
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_athwamount" value="(@{athwiggle} + @{athhwiggle})" disabled="true" />WD
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_athcost" value="@{athdice}*2 + @{athhard}*4 + @{athwiggle}*8 + @{athhyper} + @{athhhard}*2 + @{athhwiggle}*4" disabled="true" />
+           </div>
+           <div class="td">
+
+           <button type="roll" name="roll_athoutput" value="/roll (@{bodydice} + @{bodyhyper} + @{athdice} + @{athhyper})d10mtsd"></button>
+
+           </div>
+           </div>
+           <div class="tr">
+               <div class="td">
+                   Block
+</div>
+              
+              <div class="td">
+                    <input type="number" name="attr_blkdice" value="0" />
+           </div>
+                         <div class="td">
+                    <input type="number" name="attr_blkhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_blkwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_blkhyper" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_blkhhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_blkhwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_blkamount" value="(@{blkdice} + @{blkhyper})" disabled="true" />D
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_blkhamount" value="(@{blkhard} + @{blkhhard})" disabled="true" />HD
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_blkwamount" value="(@{blkwiggle} + @{blkhwiggle})" disabled="true" />WD
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_blkcost" value="@{blkdice}*2 + @{blkhard}*4 + @{blkwiggle}*8 + @{blkhyper} + @{blkhhard}*2 + @{blkhwiggle}*4" disabled="true" />
+           </div>
+           <div class="td">
+
+           <button type="roll" name="roll_blkoutput" value="/roll (@{bodydice} + @{bodyhyper} + @{blkdice} + @{blkhyper})d10mtsd"></button>
+
+           </div>
+           </div>
+           <div class="tr">
+               <div class="td">
+                   Brawling
+</div>
+              
+              <div class="td">
+                    <input type="number" name="attr_bwldice" value="0" />
+           </div>
+                         <div class="td">
+                    <input type="number" name="attr_bwlhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_bwlwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_bwlhyper" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_bwlhhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_bwlhwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_bwlamount" value="(@{bwldice} + @{bwlhyper})" disabled="true" />D
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_bwlhamount" value="(@{bwlhard} + @{bwlhhard})" disabled="true" />HD
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_bwlwamount" value="(@{bwlwiggle} + @{bwlhwiggle})" disabled="true" />WD
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_bwlcost" value="@{bwldice}*2 + @{bwlhard}*4 + @{bwlwiggle}*8 + @{bwlhyper} + @{bwlhhard}*2 + @{bwlhwiggle}*4" disabled="true" />
+           </div>
+           <div class="td">
+
+           <button type="roll" name="roll_bwloutput" value="/roll (@{bodydice} + @{bodyhyper} + @{bwldice} + @{bwlhyper})d10mtsd"></button>
+
+           </div>
+           </div>
+           <div class="tr">
+               <div class="td">
+                   Endurance
+</div>
+              
+              <div class="td">
+                    <input type="number" name="attr_enddice" value="0" />
+           </div>
+                         <div class="td">
+                    <input type="number" name="attr_endhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_endwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_endhyper" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_endhhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_endhwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_endamount" value="(@{enddice} + @{endhyper})" disabled="true" />D
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_endhamount" value="(@{endhard} + @{endhhard})" disabled="true" />HD
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_endwamount" value="(@{endwiggle} + @{endhwiggle})" disabled="true" />WD
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_endcost" value="@{enddice}*2 + @{endhard}*4 + @{endwiggle}*8 + @{endhyper} + @{endhhard}*2 + @{endhwiggle}*4" disabled="true" />
+           </div>
+           <div class="td">
+
+           <button type="roll" name="roll_endoutput" value="/roll (@{bodydice} + @{bodyhyper} +@{enddice} + @{endhyper})d10mtsd"></button>
+
+           </div>
+           </div>
+           <div class="tr">
+               <div class="td">
+                   Melee Weapon (<input type="text" style="width:45px" name="attr_mwep1" />)
+</div>
+              
+              <div class="td">
+                    <input type="number" name="attr_mwep1dice" value="0" />
+           </div>
+                         <div class="td">
+                    <input type="number" name="attr_mwep1hard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_mwep1wiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_mwep1hyper" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_mwep1hhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_mwep1hwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_mwep1amount" value="(@{mwep1dice} + @{mwep1hyper})" disabled="true" />D
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_mwep1hamount" value="(@{mwep1hard} + @{mwep1hhard})" disabled="true" />HD
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_mwep1wamount" value="(@{mwep1wiggle} + @{mwep1hwiggle})" disabled="true" />WD
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_mwep1cost" value="@{mwep1dice}*2 + @{mwep1hard}*4 + @{mwep1wiggle}*8 + @{mwep1hyper} + @{mwep1hhard}*2 + @{mwep1hwiggle}*4" disabled="true" />
+           </div>
+           <div class="td">
+
+           <button type="roll" name="roll_mwep1output" value="/roll (@{bodydice} + @{bodyhyper} + @{mwep1dice} + @{mwep1hyper})d10mtsd"></button>
+
+           </div>
+           </div>
+           <div class="tr">
+               <div class="td">
+                   Melee Weapon (<input type="text" style="width:45px" name="attr_mwep2" />)
+</div>
+              
+              <div class="td">
+                    <input type="number" name="attr_mwep2dice" value="0" />
+           </div>
+                         <div class="td">
+                    <input type="number" name="attr_mwep2hard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_mwep2wiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_mwep2hyper" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_mwep2hhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_mwep2hwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_mwep2amount" value="(@{mwep2dice} + @{mwep2hyper})" disabled="true" />D
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_mwep1hamount" value="(@{mwep2hard} + @{mwep2hhard})" disabled="true" />HD
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_mwep1wamount" value="(@{mwep2wiggle} + @{mwep2hwiggle})" disabled="true" />WD
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_mwep2cost" value="@{mwep2dice}*2 + @{mwep2hard}*4 + @{mwep2wiggle}*8 + @{mwep2hyper} + @{mwep2hhard}*2 + @{mwep2hwiggle}*4" disabled="true" />
+           </div>
+           <div class="td">
+
+           <button type="roll" name="roll_mwep2output" value="/roll (@{bodydice} + @{bodyhyper} + @{mwep2dice} + @{mwep2hyper})d10mtsd"></button>
+
+           </div>
+           </div>
+           <div class="tr">
+               <div class="td">
+                   Melee Weapon (<input type="text" style="width:45px" name="attr_mwep3" />)
+</div>
+              
+              <div class="td">
+                    <input type="number" name="attr_mwep3dice" value="0" />
+           </div>
+                         <div class="td">
+                    <input type="number" name="attr_mwep3hard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_mwep3wiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_mwep3hyper" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_mwep3hhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_mwep3hwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_mwep3amount" value="(@{mwep3dice} + @{mwep3hyper})" disabled="true" />D
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_mwep3hamount" value="(@{mwep3hard} + @{mwep3hhard})" disabled="true" />HD
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_mwep3wamount" value="(@{mwep3wiggle} + @{mwep3hwiggle})" disabled="true" />WD
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_mwep3cost" value="@{mwep3dice}*2 + @{mwep3hard}*4 + @{mwep3wiggle}*8 + @{mwep3hyper} + @{mwep3hhard}*2 + @{mwep3hwiggle}*4" disabled="true" />
+           </div>
+           <div class="td">
+           <button type="roll" name="roll_mwep3output" value="/roll (@{bodydice} + @{bodyhyper} + @{mwep3dice} + @{mwep3hyper})d10mtsd"></button>
+
+           </div>
+           </div>
+           <div class="tr">
+               <div class="td">
+                   <input type="text" style="width:150px" name="attr_undef1" />
+</div>
+              
+              <div class="td">
+                    <input type="number" name="attr_undef1dice" value="0" />
+           </div>
+                         <div class="td">
+                    <input type="number" name="attr_undef1hard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_undef1wiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_undef1hyper" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_undef1hhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_undef1hwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_undef1amount" value="(@{undef1dice} + @{undef1hyper})" disabled="true" />D
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_undef1hamount" value="(@{undef1hard} + @{undef1hhard})" disabled="true" />HD
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_undef1wamount" value="(@{undef1wiggle} + @{undef1hwiggle})" disabled="true" />WD
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_undef1cost" value="@{undef1dice}*2 + @{undef1hard}*4 + @{undef1wiggle}*8 + @{undef1hyper} + @{undef1hhard}*2 + @{undef1hwiggle}*4" disabled="true" />
+           </div>
+           <div class="td">
+           <button type="roll" name="roll_undef1output" value="/roll (@{bodydice} + @{bodyhyper} + @{undef1dice} + @{undef1hyper})d10mtsd"></button>
+
+           </div>
+           </div>
+           <div class="tr">
+               <div class="td">
+                   <input type="text" style="width:150px" name="attr_undef2" />
+</div>
+              
+<div class="td">
+                    <input type="number" name="attr_undef2dice" value="0" />
+           </div>
+                         <div class="td">
+                    <input type="number" name="attr_undef2hard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_undef2wiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_undef2hyper" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_undef2hhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_undef2hwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_undef2amount" value="(@{undef2dice} + @{undef2hyper})" disabled="true" />D
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_undef2hamount" value="(@{undef2hard} + @{undef2hhard})" disabled="true" />HD
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_undef2wamount" value="(@{undef2wiggle} + @{undef2hwiggle})" disabled="true" />WD
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_undef2cost" value="@{undef2dice}*2 + @{undef2hard}*4 + @{undef2wiggle}*8 + @{undef2hyper} + @{undef2hhard}*2 + @{undef2hwiggle}*4" disabled="true" />
+           </div>
+           <div class="td">
+           <button type="roll" name="roll_undef2output" value="/roll (@{bodydice} + @{bodyhyper} + @{undef2dice} + @{undef2hyper})d10mtsd"></button>
+
+           </div>
+     </div>
+     </div>
+
+     
+
+<div class="coordskills">
+
+               
+                   <h3>Coordination Skills</h3>
+            
+
+
+            <div class="tr">
+                    <div class="td"><h4>Skill</h4></div>
+                    <div class="td"><h4>Dice</h4></div>
+                    <div class="td"><h4>Hard</h4></div>
+                    <div class="td"><h4>Wiggle</h4></div>
+                    <div class="td"><h4>Hyper</h4></div>
+                    <div class="td"><h4>H Hard</h4></div>
+                    <div class="td"><h4>H Wiggle</h4></div>
+                    <div class="td"><h4></h4></div>
+                    <div class="td"><h4>Amounts</h4></div>
+                    <div class="td"><h4></h4></div>
+                    <div class="td"><h4>Cost</h4></div>
+                    <div class="td"><h4>Roll</h4></div>
+</div>
+           <div class="tr">
+               <div class="td">
+                   Dodge
+</div>
+              
+              <div class="td">
+                    <input type="number" name="attr_dgedice" value="0" />
+           </div>
+                         <div class="td">
+                    <input type="number" name="attr_dgehard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_dgewiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_dgehyper" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_dgehhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_dgehwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_dgeamount" value="(@{dgedice} + @{dgehyper})" disabled="true" />D
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_dgehamount" value="(@{dgehard} + @{dgehhard})" disabled="true" />HD
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_dgewamount" value="(@{dgewiggle} + @{dgehwiggle})" disabled="true" />WD
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_dgecost" value="@{dgedice}*2 + @{dgehard}*4 + @{dgewiggle}*8 + @{dgehyper} + @{dgehhard}*2 + @{dgehwiggle}*4" disabled="true" />
+           </div>
+           <div class="td">
+           <button type="roll" name="roll_dgeoutput" value="/roll (@{coorddice} + @{coordhyper} +@{dgedice} + @{dgehyper})d10mtsd"></button>
+
+           </div>
+           </div>
+           <div class="tr">
+               <div class="td">
+                   Driving (<input type="text" style="width:50px" name="attr_drv1" />)
+</div>
+              
+              <div class="td">
+                    <input type="number" name="attr_drv1dice" value="0" />
+           </div>
+                         <div class="td">
+                    <input type="number" name="attr_drv1hard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_drv1wiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_drv1hyper" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_drv1hhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_drv1hwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_drv1amount" value="(@{drv1dice} + @{drv1hyper})" disabled="true" />D
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_drv1hamount" value="(@{drv1hard} + @{drv1hhard})" disabled="true" />HD
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_drv1wamount" value="(@{drv1wiggle} + @{drv1hwiggle})" disabled="true" />WD
+           </div>
+                                    <div class="td">
+                   <input type="number" name="attr_drv1cost" value="@{drv1dice}*2 + @{drv1hard}*4 + @{drv1wiggle}*8 + @{drv1hyper} + @{drv1hhard}*2 + @{drv1hwiggle}*4" disabled="true" />
+           </div>
+           <div class="td">
+           <button type="roll" name="roll_drv1output" value="/roll (@{coorddice} + @{coordhyper} + @{drv1dice} + @{drv1hyper})d10mtsd"></button>
+
+           </div>
+           </div>
+           <div class="tr">
+               <div class="td">
+                   Driving (<input type="text" style="width:50px" name="attr_drv2" />)
+</div>
+              
+              <div class="td">
+                    <input type="number" name="attr_drv2dice" value="0" />
+           </div>
+                         <div class="td">
+                    <input type="number" name="attr_drv2hard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_drv2wiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_drv2hyper" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_drv2hhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_drv2hwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_drv2amount" value="(@{drv2dice} + @{drv2hyper})" disabled="true" />D
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_drv2hamount" value="(@{drv2hard} + @{drv2hhard})" disabled="true" />HD
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_drv2wamount" value="(@{drv2wiggle} + @{drv2hwiggle})" disabled="true" />WD
+           </div>
+                                    <div class="td">
+                   <input type="number" name="attr_drv2cost" value="@{drv2dice}*2 + @{drv2hard}*4 + @{drv2wiggle}*8 + @{drv2hyper} + @{drv2hhard}*2 + @{drv2hwiggle}*4" disabled="true" />
+           </div>
+           <div class="td">
+           <button type="roll" name="roll_drv2output" value="/roll (@{coorddice} + @{coordhyper} + @{drv2dice} + @{drv2hyper})d10mtsd"></button>
+
+           </div>
+           </div>
+          
+           <div class="tr">
+               <div class="td">
+                   Ranged Weapon (<input type="text" style="width:35px" name="attr_rwep1" />)
+</div>
+              
+              <div class="td">
+                    <input type="number" name="attr_rwep1dice" value="0" />
+           </div>
+                         <div class="td">
+                    <input type="number" name="attr_rwep1hard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_rwep1wiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_rwep1hyper" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_rwep1hhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_rwep1hwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_rwep1amount" value="(@{rwep1dice} + @{rwep1hyper})" disabled="true" />D
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_rwep1hamount" value="(@{rwep1hard} + @{rwep1hhard})" disabled="true" />HD
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_rwep1wamount" value="(@{rwep1wiggle} + @{rwep1hwiggle})" disabled="true" />WD
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_rwep1cost" value="@{rwep1dice}*2 + @{rwep1hard}*4 + @{rwep1wiggle}*8 + @{rwep1hyper} + @{rwep1hhard}*2 + @{rwep1hwiggle}*4" disabled="true" />
+           </div><div class="td">
+           <button type="roll" name="roll_rwep1output" value="/roll (@{coorddice} + @{coordhyper} + @{rwep1dice} + @{rwep1hyper})d10mtsd"></button>
+
+           </div>
+           </div>
+           <div class="tr">
+               <div class="td">
+                   Ranged Weapon (<input type="text" style="width:35px" name="attr_rwep2" />)
+</div>
+              
+              <div class="td">
+                    <input type="number" name="attr_rwep2dice" value="0" />
+           </div>
+                         <div class="td">
+                    <input type="number" name="attr_rwep2hard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_rwep2wiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_rwep2hyper" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_rwep2hhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_rwep2hwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_rwep2amount" value="(@{rwep2dice} + @{rwep2hyper})" disabled="true" />D
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_rwep2hamount" value="(@{rwep2hard} + @{rwep2hhard})" disabled="true" />HD
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_rwep2wamount" value="(@{rwep2wiggle} + @{rwep2hwiggle})" disabled="true" />WD
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_rwep2cost" value="@{rwep2dice}*2 + @{rwep2hard}*4 + @{rwep2wiggle}*8 + @{rwep2hyper} + @{rwep2hhard}*2 + @{rwep2hwiggle}*4" disabled="true" />
+           </div><div class="td">
+           <button type="roll" name="roll_rwep2output" value="/roll (@{coorddice} + @{coordhyper} + @{rwep2dice} + @{rwep2hyper})d10mtsd"></button>
+
+           </div>
+           </div>
+          
+           <div class="tr">
+               <div class="td">
+                   Ranged Weapon (<input type="text" style="width:35px" name="attr_rwep3" />)
+</div>
+              
+              <div class="td">
+                    <input type="number" name="attr_rwep3dice" value="0" />
+           </div>
+                         <div class="td">
+                    <input type="number" name="attr_rwep3hard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_rwep3wiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_rwep3hyper" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_rwep3hhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_rwep3hwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_rwep3amount" value="(@{rwep3dice} + @{rwep3hyper})" disabled="true" />D
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_rwep3hamount" value="(@{rwep3hard} + @{rwep3hhard})" disabled="true" />HD
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_rwep3wamount" value="(@{rwep3wiggle} + @{rwep3hwiggle})" disabled="true" />WD
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_rwep3cost" value="@{rwep3dice}*2 + @{rwep3hard}*4 + @{rwep3wiggle}*8 + @{rwep3hyper} + @{rwep3hhard}*2 + @{rwep3hwiggle}*4" disabled="true" />
+           </div><div class="td">
+           <button type="roll" name="roll_rwep3output" value="/roll (@{coorddice} + @{coordhyper} + @{rwep3dice} + @{rwep3hyper})d10mtsd"></button>
+
+           </div>
+           </div>
+          
+           <div class="tr">
+               <div class="td">
+                   Stealth
+</div>
+              
+              <div class="td">
+                    <input type="number" name="attr_stlhdice" value="0" />
+           </div>
+                         <div class="td">
+                    <input type="number" name="attr_stlhhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_stlhwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_stlhhyper" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_stlhhhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_stlhhwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_stlhamount" value="(@{stlhdice} + @{stlhhyper})" disabled="true" />D
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_stlhhamount" value="(@{stlhhard} + @{stlhhhard})" disabled="true" />HD
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_stlthwamount" value="(@{stlhwiggle} + @{stlhhwiggle})" disabled="true" />WD
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_stlhcost" value="@{stlhdice}*2 + @{stlhhard}*4 + @{stlhwiggle}*8 + @{stlhhyper} + @{stlhhhard}*2 + @{stlhhwiggle}*4" disabled="true" />
+           </div>
+           <div class="td">
+           <button type="roll" name="roll_stlhoutput" value="/roll (@{coorddice} + @{coordhyper} + @{stlhdice} + @{stlhhyper})d10mtsd"></button>
+
+           </div>
+           </div>
+           <div class="tr">
+               <div class="td">
+                   <input type="text" style="width:150px" name="attr_undef3" />
+</div>
+              
+              <div class="td">
+                    <input type="number" name="attr_undef3dice" value="0" />
+           </div>
+                         <div class="td">
+                    <input type="number" name="attr_undef3hard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_undef3wiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_undef3hyper" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_undef3hhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_undef3hwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_undef3amount" value="(@{undef3dice} + @{undef3hyper})" disabled="true" />D
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_undef3hamount" value="(@{undef3hard} + @{undef3hhard})" disabled="true" />HD
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_undef3wamount" value="(@{undef3wiggle} + @{undef3hwiggle})" disabled="true" />WD
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_undef3cost" value="@{undef3dice}*2 + @{undef3hard}*4 + @{undef3wiggle}*8 + @{undef3hyper} + @{undef3hhard}*2 + @{undef3hwiggle}*4" disabled="true" />
+           </div>
+           <div class="td">
+           <button type="roll" name="roll_undef3output" value="/roll (@{coorddice} + @{coordhyper} + @{undef3dice} + @{undef3hyper})d10mtsd"></button>
+
+           </div>
+           </div>
+           <div class="tr">
+               <div class="td">
+                   <input type="text" style="width:150px" name="attr_undef4" />
+</div>
+              
+              <div class="td">
+                    <input type="number" name="attr_undef4dice" value="0" />
+           </div>
+                         <div class="td">
+                    <input type="number" name="attr_undef4hard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_undef4wiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_undef4hyper" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_undef4hhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_undef4hwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_undef4amount" value="(@{undef4dice} + @{undef4hyper})" disabled="true" />D
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_undef4hamount" value="(@{undef4hard} + @{undef4hhard})" disabled="true" />HD
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_undef4wamount" value="(@{undef4wiggle} + @{undef4hwiggle})" disabled="true" />WD
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_undef4cost" value="@{undef4dice}*2 + @{undef4hard}*4 + @{undef4wiggle}*8 + @{undef4hyper} + @{undef4hhard}*2 + @{undef4hwiggle}*4" disabled="true" />
+           </div>
+           <div class="td">
+           <button type="roll" name="roll_undef4output" value="/roll (@{coorddice} + @{coordhyper} + @{undef4dice} + @{undef4hyper})d10mtsd"></button>
+
+           </div>
+           </div>
+           </div>
+         
+          
+
+<div class="senseskills">
+               <div class="tr"><div class="td"><h3>Sense Skills</h3></div></div>
+
+            <div class="tr">
+                    <div class="td"><h4>Skill</h4></div>
+                    <div class="td"><h4>Dice</h4></div>
+                    <div class="td"><h4>Hard</h4></div>
+                    <div class="td"><h4>Wiggle</h4></div>
+                    <div class="td"><h4>Hyper</h4></div>
+                    <div class="td"><h4>H Hard</h4></div>
+                    <div class="td"><h4>H Wiggle</h4></div>
+                    <div class="td"><h4></h4></div>
+                    <div class="td"><h4>Amounts</h4></div>
+                    <div class="td"><h4></h4></div>
+                    <div class="td"><h4>Cost</h4></div>
+                    <div class="td"><h4>Roll</h4></div>
+</div>
+           <div class="tr">
+               <div class="td">
+                   Empathy
+</div>
+              
+              <div class="td">
+                    <input type="number" name="attr_empdice" value="0" />
+           </div>
+                         <div class="td">
+                    <input type="number" name="attr_emphard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_empwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_emphyper" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_emphhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_emphwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_empamount" value="(@{empdice} + @{emphyper})" disabled="true" />D
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_emphamount" value="(@{emphard} + @{emphhard})" disabled="true" />HD
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_empwamount" value="(@{empwiggle} + @{emphwiggle})" disabled="true" />WD
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_empcost" value="@{empdice}*2 + @{emphard}*4 + @{empwiggle}*8 + @{emphyper} + @{emphhard}*2 + @{emphwiggle}*4" disabled="true" />
+           </div>
+           <div class="td">
+           <button type="roll" name="roll_empoutput" value="/roll (@{sensedice} + @{sensehyper} + @{empdice} + @{emphyper})d10mtsd"></button>
+
+           </div>
+           </div>
+           <div class="tr">
+               <div class="td">
+                   Perception
+</div>
+              
+              <div class="td">
+                    <input type="number" name="attr_percdice" value="0" />
+           </div>
+                         <div class="td">
+                    <input type="number" name="attr_perchard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_percwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_perchyper" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_perchhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_perchwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_percamount" value="(@{percdice} + @{perchyper})" disabled="true" />D
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_perchamount" value="(@{perchard} + @{perchhard})" disabled="true" />HD
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_percwamount" value="(@{percwiggle} + @{perchwiggle})" disabled="true" />WD
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_perccost" value="@{percdice}*2 + @{perchard}*4 + @{percwiggle}*8 + @{perchyper} + @{perchhard}*2 + @{perchwiggle}*4" disabled="true" />
+           </div><div class="td">
+           <button type="roll" name="roll_percoutput" value="/roll (@{sensedice} + @{sensehyper} + @{percdice} + @{perchyper})d10mtsd"></button>
+
+           </div>
+           </div>
+          
+           <div class="tr">
+               <div class="td">
+                   Scrutiny
+</div>
+              
+              <div class="td">
+                    <input type="number" name="attr_scrdice" value="0" />
+           </div>
+                         <div class="td">
+                    <input type="number" name="attr_scrhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_scrwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_scrhyper" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_scrhhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_scrhwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_scramount" value="(@{scrdice} + @{scrhyper})" disabled="true" />D
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_scrhamount" value="(@{scrhard} + @{scrhhard})" disabled="true" />HD
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_scrwamount" value="(@{scrwiggle} + @{scrhwiggle})" disabled="true" />WD
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_srccost" value="@{scrdice}*2 + @{scrhard}*4 + @{scrwiggle}*8 + @{scrhyper} + @{scrhhard}*2 + @{scrhwiggle}*4" disabled="true" />
+           </div>
+           <div class="td">
+
+           <button type="roll" name="roll_scroutput" value="/roll (@{sensedice} + @{sensehyper} + @{scrdice} + @{scrhyper})d10mtsd"></button>
+
+           </div>
+           </div>
+           <div class="tr">
+               <div class="td">
+                   <input type="text" style="width:150px" name="attr_undef5" />
+</div>
+              
+              <div class="td">
+                    <input type="number" name="attr_undef5dice" value="0" />
+           </div>
+                         <div class="td">
+                    <input type="number" name="attr_undef5hard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_undef5wiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_undef5hyper" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_undef5hhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_undef5hwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_undef5amount" value="(@{undef5dice} + @{undef5hyper})" disabled="true" />D
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_undef5hamount" value="(@{undef5hard} + @{undef5hhard})" disabled="true" />HD
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_undef5wamount" value="(@{undef5wiggle} + @{undef5hwiggle})" disabled="true" />WD
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_undef5cost" value="@{undef5dice}*2 + @{undef5hard}*4 + @{undef5wiggle}*8 + @{undef5hyper} + @{undef5hhard}*2 + @{undef5hwiggle}*4" disabled="true" />
+           </div>
+           <div class="td">
+
+           <button type="roll" name="roll_undef5output" value="/roll (@{sensedice} + @{sensehyper} + @{undef5dice} + @{undef5hyper})d10mtsd"></button>
+
+           </div>
+           </div>
+           <div class="tr">
+               <div class="td">
+                   <input type="text" style="width:150px" name="attr_undef6" />
+</div>
+              
+              <div class="td">
+                    <input type="number" name="attr_undef6dice" value="0" />
+           </div>
+                         <div class="td">
+                    <input type="number" name="attr_undef6hard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_undef6wiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_undef6hyper" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_undef6hhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_undef6hwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_undef6amount" value="(@{undef6dice} + @{undef6hyper})" disabled="true" />D
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_undef6hamount" value="(@{undef6hard} + @{undef6hhard})" disabled="true" />HD
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_undef6wamount" value="(@{undef6wiggle} + @{undef6hwiggle})" disabled="true" />WD
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_undef6cost" value="@{undef6dice}*2 + @{undef6hard}*4 + @{undef6wiggle}*8 + @{undef6hyper} + @{undef6hhard}*2 + @{undef6hwiggle}*4" disabled="true" />
+           </div>
+           <div class="td">
+           <button type="roll" name="roll_undef6output" value="/roll (@{sensedice} + @{sensehyper} + @{undef6dice} + @{undef6hyper})d10mtsd"></button>
+
+           </div>
+           </div>
+           </div>
+          
+          
+           
+           
+           
+      
+<div class="mindskills">
+
+               <div class="tr"><div class="td"><h3>Mind Skills</h3></div></div>
+
+
+            <div class="tr">
+                    <div class="td"><h4>Skill</h4></div>
+                    <div class="td"><h4>Dice</h4></div>
+                    <div class="td"><h4>Hard</h4></div>
+                    <div class="td"><h4>Wiggle</h4></div>
+                    <div class="td"><h4>Hyper</h4></div>
+                    <div class="td"><h4>H Hard</h4></div>
+                    <div class="td"><h4>H Wiggle</h4></div>
+                    <div class="td"><h4></h4></div>
+                    <div class="td"><h4>Amounts</h4></div>
+                    <div class="td"><h4></h4></div>
+                    <div class="td"><h4>Cost</h4></div>
+                    <div class="td"><h4>Roll</h4></div>
+</div>
+           <div class="tr">
+               <div class="td">
+                   First Aid
+</div>
+              
+              <div class="td">
+                    <input type="number" name="attr_fadice" value="0" />
+           </div>
+                         <div class="td">
+                    <input type="number" name="attr_fahard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_fawiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_fahyper" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_fahhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_fahwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_faamount" value="(@{fadice} + @{fahyper})" disabled="true" />D
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_fahamount" value="(@{fahard} + @{fahhard})" disabled="true" />HD
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_fawamount" value="(@{fawiggle} + @{fahwiggle})" disabled="true" />WD
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_facost" value="@{fadice}*2 + @{fahard}*4 + @{fawiggle}*8 + @{fahyper} + @{fahhard}*2 + @{fahwiggle}*4" disabled="true" />
+           </div>
+           <div class="td">
+
+           <button type="roll" name="roll_faoutput" value="/roll (@{minddice} + @{mindhyper} + @{fadice} + @{fahyper})d10mtsd"></button>
+
+           </div>
+           </div>
+           <div class="tr">
+               <div class="td">
+                   Knowledge (<input type="text" style="width:65px" name="attr_kno1" />)
+</div>
+              
+              <div class="td">
+                    <input type="number" name="attr_kno1dice" value="0" />
+           </div>
+                         <div class="td">
+                    <input type="number" name="attr_kno1hard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_kno1wiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_kno1hyper" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_kno1hhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_kno1hwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_kno1amount" value="(@{kno1dice} + @{kno1hyper})" disabled="true" />D
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_kno1hamount" value="(@{kno1hard} + @{kno1hhard})" disabled="true" />HD
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_kno1wamount" value="(@{kno1wiggle} + @{kno1hwiggle})" disabled="true" />WD
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_kno1cost" value="@{kno1dice}*2 + @{kno1hard}*4 + @{kno1wiggle}*8 + @{kno1hyper} + @{kno1hhard}*2 + @{kno1hwiggle}*4" disabled="true" />
+           </div>
+           <div class="td">
+
+           <button type="roll" name="roll_kno1output" value="/roll (@{minddice} + @{mindhyper} + @{kno1dice} + @{kno1hyper})d10mtsd"></button>
+
+           </div>
+           </div>
+           <div class="tr">
+               <div class="td">
+                   Knowledge (<input type="text" style="width:65px" name="attr_kno2" />)
+</div>
+              
+              <div class="td">
+                    <input type="number" name="attr_kno2dice" value="0" />
+           </div>
+                         <div class="td">
+                    <input type="number" name="attr_kno2hard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_kno2wiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_kno2hyper" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_kno2hhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_kno2hwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_kno2amount" value="(@{kno2dice} + @{kno2hyper})" disabled="true" />D
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_kno2hamount" value="(@{kno2hard} + @{kno2hhard})" disabled="true" />HD
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_kno2wamount" value="(@{kno2wiggle} + @{kno2hwiggle})" disabled="true" />WD
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_kno2cost" value="@{kno2dice}*2 + @{kno2hard}*4 + @{kno2wiggle}*8 + @{kno2hyper} + @{kno2hhard}*2 + @{kno2hwiggle}*4" disabled="true" />
+           </div>
+           <div class="td">
+
+           <button type="roll" name="roll_kno2output" value="/roll (@{minddice} + @{mindhyper} + @{kno2dice} + @{kno2hyper})d10mtsd"></button>
+
+           </div>
+           </div>
+           <div class="tr">
+               <div class="td">
+                   Language (<input type="text" style="width:75px" name="attr_lan1" />)
+</div>
+              
+              <div class="td">
+                    <input type="number" name="attr_lan1dice" value="0" />
+           </div>
+                         <div class="td">
+                    <input type="number" name="attr_lan1hard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_lan1wiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_lan1hyper" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_lan1hhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_lan1hwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_lan1amount" value="(@{lan1dice} + @{lan1hyper})" disabled="true" />D
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_lan1hamount" value="(@{lan1hard} + @{lan1hhard})" disabled="true" />HD
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_lan1wamount" value="(@{lan1wiggle} + @{lan1hwiggle})" disabled="true" />WD
+           </div>
+                                    <div class="td">
+                   <input type="number" name="attr_lan1cost" value="@{lan1dice}*2 + @{lan1hard}*4 + @{lan1wiggle}*8 + @{lan1hyper} + @{lan1hhard}*2 + @{lan1hwiggle}*4" disabled="true" />
+           </div>
+           <div class="td">
+
+           <button type="roll" name="roll_lan1output" value="/roll (@{minddice} + @{mindhyper} + @{lan1dice} + @{lan1hyper})d10mtsd"></button>
+
+           </div>
+           </div>
+           <div class="tr">
+               <div class="td">
+                   Language (<input type="text" style="width:75px" name="attr_lan2" />)
+</div>
+              
+              <div class="td">
+                    <input type="number" name="attr_lan2dice" value="0" />
+           </div>
+                         <div class="td">
+                    <input type="number" name="attr_lan2hard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_lan2wiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_lan2hyper" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_lan2hhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_lan2hwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_lan2amount" value="(@{lan2dice} + @{lan2hyper})" disabled="true" />D
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_lan2hamount" value="(@{lan2hard} + @{lan2hhard})" disabled="true" />HD
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_lan2wamount" value="(@{lan2wiggle} + @{lan2hwiggle})" disabled="true" />WD
+           </div>
+                                    <div class="td">
+                   <input type="number" name="attr_lan2cost" value="@{lan2dice}*2 + @{lan2hard}*4 + @{lan2wiggle}*8 + @{lan2hyper} + @{lan2hhard}*2 + @{lan2hwiggle}*4" disabled="true" />
+           </div>
+           <div class="td">
+
+           <button type="roll" name="roll_lan2output" value="/roll (@{minddice} + @{mindhyper} + @{lan2dice} + @{lan2hyper})d10mtsd"></button>
+
+           </div>
+           </div>
+           <div class="tr">
+               <div class="td">
+                   Medicine
+</div>
+              
+              <div class="td">
+                    <input type="number" name="attr_meddice" value="0" />
+           </div>
+                         <div class="td">
+                    <input type="number" name="attr_medhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_medwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_medhyper" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_medhhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_medhwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_medamount" value="(@{meddice} + @{medhyper})" disabled="true" />D
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_medhamount" value="(@{medhard} + @{medhhard})" disabled="true" />HD
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_medwamount" value="(@{medwiggle} + @{medhwiggle})" disabled="true" />WD
+           </div>
+                                    <div class="td">
+                   <input type="number" name="attr_medcost" value="@{meddice}*2 + @{medhard}*4 + @{medwiggle}*8 + @{medhyper} + @{medhhard}*2 + @{medhwiggle}*4" disabled="true" />
+           </div>
+           <div class="td">
+
+           <button type="roll" name="roll_medoutput" value="/roll (@{minddice} + @{mindhyper} + @{meddice} + @{medhyper})d10mtsd"></button>
+
+           </div>
+           </div>
+           <div class="tr">
+               <div class="td">
+                   Navigation
+</div>
+              
+              <div class="td">
+                    <input type="number" name="attr_navdice" value="0" />
+           </div>
+                         <div class="td">
+                    <input type="number" name="attr_navhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_navwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_navhyper" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_navhhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_navhwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_navamount" value="(@{navdice} + @{navhyper})" disabled="true" />D
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_navhamount" value="(@{navhard} + @{navhhard})" disabled="true" />HD
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_navwamount" value="(@{navwiggle} + @{navhwiggle})" disabled="true" />WD
+           </div>
+                                    <div class="td">
+                   <input type="number" name="attr_navcost" value="@{navdice}*2 + @{navhard}*4 + @{navwiggle}*8 + @{navhyper} + @{navhhard}*2 + @{navhwiggle}*4" disabled="true" />
+           </div>
+           <div class="td">
+
+           <button type="roll" name="roll_navoutput" value="/roll (@{minddice} + @{mindhyper} + @{navdice} + @{navhyper})d10mtsd"></button>
+
+           </div>
+           </div>
+           <div class="tr">
+               <div class="td">
+                   Research
+</div>
+              
+              <div class="td">
+                    <input type="number" name="attr_resdice" value="0" />
+           </div>
+                         <div class="td">
+                    <input type="number" name="attr_reshard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_reswiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_reshyper" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_reshhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_reshwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_resamount" value="(@{resdice} + @{reshyper})" disabled="true" />D
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_reshamount" value="(@{reshard} + @{reshhard})" disabled="true" />HD
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_reswamount" value="(@{reswiggle} + @{reshwiggle})" disabled="true" />WD
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_rescost" value="@{resdice}*2 + @{reshard}*4 + @{reswiggle}*8 + @{reshyper} + @{reshhard}*2 + @{reshwiggle}*4" disabled="true" />
+           </div>
+           <div class="td">
+
+           <button type="roll" name="roll_resoutput" value="/roll (@{minddice} + @{mindhyper} + @{resdice} + @{reshyper})d10mtsd"></button>
+
+           </div>
+           </div>
+           <div class="tr">
+               <div class="td">
+                   Security Systems
+</div>
+              
+              <div class="td">
+                    <input type="number" name="attr_secdice" value="0" />
+           </div>
+                         <div class="td">
+                    <input type="number" name="attr_sechard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_secwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_sechyper" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_sechhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_sechwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_secamount" value="(@{secdice} + @{sechyper})" disabled="true" />D
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_sechamount" value="(@{sechard} + @{sechhard})" disabled="true" />HD
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_secwamount" value="(@{secwiggle} + @{sechwiggle})" disabled="true" />WD
+           </div>
+                                    <div class="td">
+                   <input type="number" name="attr_seccost" value="@{secdice}*2 + @{sechard}*4 + @{secwiggle}*8 + @{sechyper} + @{sechhard}*2 + @{sechwiggle}*4" disabled="true" />
+           </div>
+           <div class="td">
+
+           <button type="roll" name="roll_secoutput" value="/roll (@{minddice} + @{mindhyper} + @{secdice} + @{sechyper})d10mtsd"></button>
+
+           </div>
+           </div>
+           <div class="tr">
+               <div class="td">
+                   Streetwise
+</div>
+              
+              <div class="td">
+                    <input type="number" name="attr_swdice" value="0" />
+           </div>
+                         <div class="td">
+                    <input type="number" name="attr_swhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_swwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_swhyper" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_swhhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_swhwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_swamount" value="(@{swdice} + @{swhyper})" disabled="true" />D
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_swhamount" value="(@{swhard} + @{swhhard})" disabled="true" />HD
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_swwamount" value="(@{swwiggle} + @{swhwiggle})" disabled="true" />WD
+           </div>
+                                    <div class="td">
+                   <input type="number" name="attr_swcost" value="@{swdice}*2 + @{swhard}*4 + @{swwiggle}*8 + @{swhyper} + @{swhhard}*2 + @{swhwiggle}*4" disabled="true" />
+           </div>
+           <div class="td">
+
+           <button type="roll" name="roll_swoutput" value="/roll (@{minddice} + @{mindhyper} + @{swdice} + @{swhyper})d10mtsd"></button>
+
+           </div>
+           </div>
+           <div class="tr">
+               <div class="td">
+                   Survival
+</div>
+              
+              <div class="td">
+                    <input type="number" name="attr_srvdice" value="0" />
+           </div>
+                         <div class="td">
+                    <input type="number" name="attr_srvhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_srvwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_srvhyper" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_srvhhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_srvhwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_srvamount" value="(@{srvdice} + @{srvhyper})" disabled="true" />D
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_srvhamount" value="(@{srvhard} + @{srvhhard})" disabled="true" />HD
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_srvwamount" value="(@{srvwiggle} + @{srvhwiggle})" disabled="true" />WD
+           </div>
+                                    <div class="td">
+                   <input type="number" name="attr_srvcost" value="@{srvdice}*2 + @{srvhard}*4 + @{srvwiggle}*8 + @{srvhyper} + @{srvhhard}*2 + @{srvhwiggle}*4" disabled="true" />
+           </div>
+           <div class="td">
+
+           <button type="roll" name="roll_srvoutput" value="/roll (@{minddice} + @{mindhyper} + @{srvdice} + @{srvhyper})d10mtsd"></button>
+
+           </div>
+           </div>
+           <div class="tr">
+               <div class="td">
+                   Tactics
+</div>
+              
+              <div class="td">
+                    <input type="number" name="attr_tacdice" value="0" />
+           </div>
+                         <div class="td">
+                    <input type="number" name="attr_tachard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_tacwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_tachyper" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_tachhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_tachwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_tacamount" value="(@{tacdice} + @{tachyper})" disabled="true" />D
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_tachamount" value="(@{tachard} + @{tachhard})" disabled="true" />HD
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_tacwamount" value="(@{tacwiggle} + @{tachwiggle})" disabled="true" />WD
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_taccost" value="@{tacdice}*2 + @{tachard}*4 + @{tacwiggle}*8 + @{tachyper} + @{tachhard}*2 + @{tachwiggle}*4" disabled="true" />
+           </div>
+           <div class="td">
+           <button type="roll" name="roll_tacoutput" value="/roll (@{minddice} + @{mindhyper} + @{tacdice} + @{tachyper})d10mtsd"></button>
+
+           </div>
+           </div>
+           <div class="tr">
+               <div class="td">
+                   <input type="text" style="width:150px" name="attr_undef7" />
+</div>
+              
+              <div class="td">
+                    <input type="number" name="attr_undef7dice" value="0" />
+           </div>
+                         <div class="td">
+                    <input type="number" name="attr_undef7hard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_undef7wiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_undef7hyper" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_undef7hhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_undef7hwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_undef7amount" value="(@{undef7dice} + @{undef7hyper})" disabled="true" />D
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_undef7hamount" value="(@{undef7hard} + @{undef7hhard})" disabled="true" />HD
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_undef7wamount" value="(@{undef7wiggle} + @{undef7hwiggle})" disabled="true" />WD
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_undef7cost" value="@{undef7dice}*2 + @{undef7hard}*4 + @{undef7wiggle}*8 + @{undef7hyper} + @{undef7hhard}*2 + @{undef7hwiggle}*4" disabled="true" />
+           </div>
+           <div class="td">
+           <button type="roll" name="roll_undef7output" value="/roll (@{minddice} + @{mindhyper} + @{undef7dice} + @{undef7hyper})d10mtsd"></button>
+
+           </div>
+           </div>
+           <div class="tr">
+               <div class="td">
+                   <input type="text" style="width:150px" name="attr_undef8" />
+</div>
+              
+              <div class="td">
+                    <input type="number" name="attr_undef8dice" value="0" />
+           </div>
+                         <div class="td">
+                    <input type="number" name="attr_undef8hard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_undef8wiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_undef8hyper" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_undef8hhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_undef8hwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_undef8amount" value="(@{undef8dice} + @{undef8hyper})" disabled="true" />D
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_undef8hamount" value="(@{undef8hard} + @{undef8hhard})" disabled="true" />HD
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_undef8wamount" value="(@{undef8wiggle} + @{undef8hwiggle})" disabled="true" />WD
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_undef8cost" value="@{undef8dice}*2 + @{undef8hard}*4 + @{undef8wiggle}*8 + @{undef8hyper} + @{undef8hhard}*2 + @{undef8hwiggle}*4" disabled="true" />
+           </div>
+           <div class="td">
+           <button type="roll" name="roll_undef8output" value="/roll (@{minddice} + @{mindhyper} + @{undef8dice} + @{undef8hyper})d10mtsd"></button>
+
+           </div>
+           </div>
+           </div>
+ 
+ 
+
+<div class="charmskills">
+               <div class="tr"><div class="td"><h3>Charm Skills</h3></div></div>
+
+            <div class="tr">
+                    <div class="td"><h4>Skill</h4></div>
+                    <div class="td"><h4>Dice</h4></div>
+                    <div class="td"><h4>Hard</h4></div>
+                    <div class="td"><h4>Wiggle</h4></div>
+                    <div class="td"><h4>Hyper</h4></div>
+                    <div class="td"><h4>H Hard</h4></div>
+                    <div class="td"><h4>H Wiggle</h4></div>
+                    <div class="td"><h4></h4></div>
+                    <div class="td"><h4>Amounts</h4></div>
+                    <div class="td"><h4></h4></div>
+                    <div class="td"><h4>Cost</h4></div>
+                    <div class="td"><h4>Roll</h4></div>
+</div>
+           <div class="tr">
+               <div class="td">
+                   Lie
+</div>
+              
+              <div class="td">
+                    <input type="number" name="attr_liedice" value="0" />
+           </div>
+                         <div class="td">
+                    <input type="number" name="attr_liehard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_liewiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_liehyper" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_liehhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_liehwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_lieamount" value="(@{liedice} + @{liehyper})" disabled="true" />D
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_liehamount" value="(@{liehard} + @{liehhard})" disabled="true" />HD
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_liewamount" value="(@{liewiggle} + @{liehwiggle})" disabled="true" />WD
+           </div>
+                                    <div class="td">
+                   <input type="number" name="attr_liecost" value="@{liedice}*2 + @{liehard}*4 + @{liewiggle}*8 + @{liehyper} + @{liehhard}*2 + @{liehwiggle}*4" disabled="true" />
+           </div>
+           <div class="td">
+
+           <button type="roll" name="roll_lieoutput" value="/roll (@{charmdice} + @{charmhyper} + @{liedice} + @{liehyper})d10mtsd"></button>
+
+           </div>
+           </div>
+           <div class="tr">
+               <div class="td">
+                   Performance (<input type="text" style="width:55px" name="attr_perf" />)
+</div>
+              
+              <div class="td">
+                    <input type="number" name="attr_perfdice" value="0" />
+           </div>
+                         <div class="td">
+                    <input type="number" name="attr_perfhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_perfwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_perfhyper" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_perfhhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_perfhwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_perfamount" value="(@{perfdice} + @{perfhyper})" disabled="true" />D
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_perfhamount" value="(@{perfhard} + @{perfhhard})" disabled="true" />HD
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_perfwamount" value="(@{perfwiggle} + @{perfhwiggle})" disabled="true" />WD
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_perfcost" value="@{perfdice}*2 + @{perfhard}*4 + @{perfwiggle}*8 + @{perfhyper} + @{perfhhard}*2 + @{perfhwiggle}*4" disabled="true" />
+           </div>
+           <div class="td">
+
+           <button type="roll" name="roll_perfoutput" value="/roll (@{charmdice} + @{charmhyper} + @{perfdice} + @{perfhyper})d10mtsd"></button>
+
+           </div>
+           </div>
+           <div class="tr">
+               <div class="td">
+                   Persuasion
+</div>
+              
+              <div class="td">
+                    <input type="number" name="attr_persdice" value="0" />
+           </div>
+                         <div class="td">
+                    <input type="number" name="attr_pershard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_perswiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_pershyper" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_pershhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_pershwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_persamount" value="(@{persdice} + @{pershyper})" disabled="true" />D
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_pershamount" value="(@{pershard} + @{pershhard})" disabled="true" />HD
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_perswamount" value="(@{perswiggle} + @{pershwiggle})" disabled="true" />WD
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_perscost" value="@{persdice}*2 + @{pershard}*4 + @{perswiggle}*8 + @{pershyper} + @{pershhard}*2 + @{pershwiggle}*4" disabled="true" />
+           </div>
+           <div class="td">
+
+           <button type="roll" name="roll_persoutput" value="/roll (@{charmdice} + @{charmhyper} + @{persdice} + @{pershyper})d10mtsd"></button>
+
+           </div>
+           </div>
+           <div class="tr">
+               <div class="td">
+                   <input type="text" style="width:150px" name="attr_undef9" />
+</div>
+              
+              <div class="td">
+                    <input type="number" name="attr_undef9dice" value="0" />
+           </div>
+                         <div class="td">
+                    <input type="number" name="attr_undef9hard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_undef9wiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_undef9hyper" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_undef9hhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_undef9hwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_undef9amount" value="(@{undef9dice} + @{undef9hyper})" disabled="true" />D
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_undef9hamount" value="(@{undef9hard} + @{undef9hhard})" disabled="true" />HD
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_undef9wamount" value="(@{undef9wiggle} + @{undef9hwiggle})" disabled="true" />WD
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_undef9cost" value="@{undef9dice}*2 + @{undef9hard}*4 + @{undef9wiggle}*8 + @{undef9hyper} + @{undef9hhard}*2 + @{undef9hwiggle}*4" disabled="true" />
+           </div>
+           <div class="td">
+
+           <button type="roll" name="roll_undef9output" value="/roll (@{minddice} + @{mindhyper} + @{undef9dice} + @{undef9hyper})d10mtsd"></button>
+
+           </div>
+           </div>
+           <div class="tr">
+               <div class="td">
+                   <input type="text" style="width:150px" name="attr_undef10" />
+</div>
+              
+              <div class="td">
+                    <input type="number" name="attr_undef10dice" value="0" />
+           </div>
+                         <div class="td">
+                    <input type="number" name="attr_undef10hard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_undef10wiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_undef10hyper" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_undef10hhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_undef10hwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_undef10amount" value="(@{undef10dice} + @{undef10hyper})" disabled="true" />D
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_undef10hamount" value="(@{undef10hard} + @{undef10hhard})" disabled="true" />HD
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_undef10wamount" value="(@{undef10wiggle} + @{undef10hwiggle})" disabled="true" />WD
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_undef10cost" value="@{undef10dice}*2 + @{undef10hard}*4 + @{undef10wiggle}*8 + @{undef10hyper} + @{undef10hhard}*2 + @{undef10hwiggle}*4" disabled="true" />
+           </div>
+           <div class="td">
+
+           <button type="roll" name="roll_undef10output" value="/roll (@{minddice} + @{mindhyper} + @{undef10dice} + @{undef10hyper})d10mtsd"></button>
+
+           </div>
+           </div>
+           </div>
+           
+         
+
+
+<div class="commskills">
+               <div class="tr"><div class="td"><h3>Command Skills</h3></div></div>
+
+            <div class="tr">
+                    <div class="td"><h4>Skill</h4></div>
+                    <div class="td"><h4>Dice</h4></div>
+                    <div class="td"><h4>Hard</h4></div>
+                    <div class="td"><h4>Wiggle</h4></div>
+                    <div class="td"><h4>Hyper</h4></div>
+                    <div class="td"><h4>H Hard</h4></div>
+                    <div class="td"><h4>H Wiggle</h4></div>
+                    <div class="td"><h4></h4></div>
+                    <div class="td"><h4>Amounts</h4></div>
+                    <div class="td"><h4></h4></div>
+                    <div class="td"><h4>Cost</h4></div>
+                    <div class="td"><h4>Roll</h4></div>
+</div>
+           <div class="tr">
+               <div class="td">
+                   Interrogation
+</div>
+
+              
+              <div class="td">
+                    <input type="number" name="attr_itgdice" value="0" />
+           </div>
+                         <div class="td">
+                    <input type="number" name="attr_itghard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_itgwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_itghyper" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_itghhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_itghwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_itgamount" value="(@{itgdice} + @{itghyper})" disabled="true" />D
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_itghamount" value="(@{itghard} + @{itghhard})" disabled="true" />HD
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_itgwamount" value="(@{itgwiggle} + @{itghwiggle})" disabled="true" />WD
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_itgcost" value="@{itgdice}*2 + @{itghard}*4 + @{itgwiggle}*8 + @{itghyper} + @{itghhard}*2 + @{itghwiggle}*4" disabled="true" />
+           </div>
+           <div class="td">
+
+           <button type="roll" name="roll_itgoutput" value="/roll (@{commdice} + @{commhyper} + @{itgdice} + @{itghyper})d10mtsd"></button>
+
+           </div>
+           </div>
+           <div class="tr">
+               <div class="td">
+                   Intimidation
+</div>
+              
+              <div class="td">
+                    <input type="number" name="attr_itmdice" value="0" />
+           </div>
+                         <div class="td">
+                    <input type="number" name="attr_itmhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_itmwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_itmhyper" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_itmhhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_itmhwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_itmamount" value="(@{itmdice} + @{itmhyper})" disabled="true" />D
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_itmhamount" value="(@{itmhard} + @{itmhhard})" disabled="true" />HD
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_itmwamount" value="(@{itmwiggle} + @{itmhwiggle})" disabled="true" />WD
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_itmcost" value="@{itmdice}*2 + @{itmhard}*4 + @{itmwiggle}*8 + @{itmhyper} + @{itmhhard}*2 + @{itmhwiggle}*4" disabled="true" />
+           </div>
+           <div class="td">
+
+           <button type="roll" name="roll_itmoutput" value="/roll (@{commdice} + @{commhyper} + @{itmdice} + @{itmhyper})d10mtsd"></button>
+
+           </div>
+           </div>
+           <div class="tr">
+               <div class="td">
+                   Leadership
+</div>
+              
+              <div class="td">
+                    <input type="number" name="attr_ldrdice" value="0" />
+           </div>
+                         <div class="td">
+                    <input type="number" name="attr_ldrhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_ldrwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_ldrhyper" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_ldrhhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_ldrhwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_ldramount" value="(@{ldrdice} + @{ldrhyper})" disabled="true" />D
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_ldrhamount" value="(@{ldrhard} + @{ldrhhard})" disabled="true" />HD
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_ldrwamount" value="(@{ldrwiggle} + @{ldrhwiggle})" disabled="true" />WD
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_ldrcost" value="@{ldrdice}*2 + @{ldrhard}*4 + @{ldrwiggle}*8 + @{ldrhyper} + @{ldrhhard}*2 + @{ldrhwiggle}*4" disabled="true" />
+           </div>
+           <div class="td">
+
+           <button type="roll" name="roll_ldroutput" value="/roll (@{commdice} + @{commhyper} + @{ldrdice} + @{ldrhyper})d10mtsd"></button>
+
+           </div>
+           </div>
+           <div class="tr">
+               <div class="td">
+                   Stability
+</div>
+              
+              <div class="td">
+                    <input type="number" name="attr_stbdice" value="0" />
+           </div>
+                         <div class="td">
+                    <input type="number" name="attr_stbhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_stbwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_stbhyper" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_stbhhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_stbhwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_stbamount" value="(@{stbdice} + @{stbhyper})" disabled="true" />D
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_stbhamount" value="(@{stbhard} + @{stbhhard})" disabled="true" />HD
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_stbwamount" value="(@{stbwiggle} + @{stbhwiggle})" disabled="true" />WD
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_stbcost" value="@{stbdice}*2 + @{stbhard}*4 + @{stbwiggle}*8 + @{stbhyper} + @{stbhhard}*2 + @{stbhwiggle}*4" disabled="true" />
+           </div>
+           <div class="td">
+
+           <button type="roll" name="roll_stboutput" value="/roll (@{commdice} + @{commhyper} + @{stbdice} + @{stbhyper})d10mtsd"></button>
+
+           </div>
+           </div>
+           <div class="tr">
+               <div class="td">
+                   <input type="text" style="width:150px" name="attr_undef11" />
+</div>
+              
+              <div class="td">
+                    <input type="number" name="attr_undef11dice" value="0" />
+           </div>
+                         <div class="td">
+                    <input type="number" name="attr_undef11hard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_undef11wiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_undef11hyper" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_undef11hhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_undef11hwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_undef11amount" value="(@{undef11dice} + @{undef11hyper})" disabled="true" />D
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_undef11hamount" value="(@{undef11hard} + @{undef11hhard})" disabled="true" />HD
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_undef11wamount" value="(@{undef11wiggle} + @{undef11hwiggle})" disabled="true" />WD
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_undef11cost" value="@{undef11dice}*2 + @{undef11hard}*4 + @{undef11wiggle}*8 + @{undef11hyper} + @{undef11hhard}*2 + @{undef11hwiggle}*4" disabled="true" />
+           </div>
+           <div class="td">
+
+           <button type="roll" name="roll_undef11output" value="/roll (@{commdice} + @{commhyper} + @{undef11dice} + @{undef11hyper})d10mtsd"></button>
+
+           </div>
+           </div>
+           <div class="tr">
+               <div class="td">
+                   <input type="text" style="width:150px" name="attr_undef12" />
+</div>
+              
+              <div class="td">
+                    <input type="number" name="attr_undef12dice" value="0" />
+           </div>
+                         <div class="td">
+                    <input type="number" name="attr_undef12hard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_undef12wiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_undef12hyper" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_undef12hhard" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_undef12hwiggle" value="0" />
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_undef12amount" value="(@{undef12dice} + @{undef12hyper})" disabled="true" />D
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_undef12hamount" value="(@{undef12hard} + @{undef12hhard})" disabled="true" />HD
+           </div>
+                                    <div class="td">
+                    <input type="number" style="width:37px" name="attr_undef12wamount" value="(@{undef12wiggle} + @{undef12hwiggle})" disabled="true" />WD
+           </div>
+                                    <div class="td">
+                    <input type="number" name="attr_undef12cost" value="@{undef12dice}*2 + @{undef12hard}*4 + @{undef12wiggle}*8 + @{undef12hyper} + @{undef12hhard}*2 + @{undef12hwiggle}*4" disabled="true" />
+           </div>
+           <div class="td">
+
+           <button type="roll" name="roll_undef12output" value="/roll (@{commdice} + @{commhyper} + @{undef12dice} + @{undef12hyper})d10mtsd"></button>
+
+           </div>
+           </div>
+</div>
+</div>

@@ -1,1 +1,267 @@
-<h1>Hello World 1</h1>
+<div class="stats">
+	<a><br></a>
+	<!-- STAT HEADER -->
+	<div class="tr">
+		<div class="td" style="width: 100px"><b>Stats</b></div>
+		<div class="td"><b>Dice</b></div>
+		<div class="td"><b>Hard </b></div>
+		<div class="td"><b>Wiggle</b></div>
+		<div class="td"><b>Hyper</b></div>
+		<div class="td"><b>H Hard</b></div>
+		<div class="td"><b>H Wiggle</b></div>
+		<div class="td"><b></b></div>
+		<div class="td"><b>Amounts</b></div>
+		<div class="td"><b></b></div>
+		<div class="td"><b>Roll</b></div>
+		<div class="td"><b>Select</b></div>
+	</div>
+	<!-- BODY -->
+	<div class="tr">
+		<div class="td">Body</div>
+		<div class="td">
+			<input type="number" name="attr_bodydice" value="0" />
+		</div>
+		<div class="td">
+			<input type="number" name="attr_bodyhard" value="0" />
+		</div>
+		<div class="td">
+			<input type="number" name="attr_bodywiggle" value="0" />
+		</div>
+		<div class="td">
+			<input type="number" name="attr_bodyhyper" value="0" />
+		</div>
+		<div class="td">
+			<input type="number" name="attr_bodyhhard" value="0" />
+		</div>
+		<div class="td">
+			<input type="number" name="attr_bodyhwiggle" value="0" />
+		</div>
+		<div class="td">
+			<input type="number"
+				style="width:37px"
+				name="attr_bodyamount"
+				value="(@{bodydice} + @{bodyhyper})"
+				disabled="true" />D
+		</div>
+		<div class="td">
+			<input type="number"
+				style="width:37px"
+				name="attr_bodyhamount"
+				value="(@{bodyhard} + @{bodyhhard})"
+				disabled="true" />HD
+		</div>
+		<div class="td">
+			<input type="number"
+				style="width:37px"
+				name="attr_bodywamount"
+				value="(@{bodywiggle} + @{bodyhwiggle})"
+				disabled="true" />WD
+		</div>
+		<div class="td">
+			<button type="roll"
+				name="roll_bodyoutput"
+				value="/roll (@{bodydice} + @{bodyhyper})d10mtsd">
+			</button>
+		</div>
+		<div class="td">
+			<input type="radio" name="attr_statCheck" value="body" checked="checked">
+		</div>
+	</div>
+	<!-- COORDINATION -->
+	<div class="tr">
+		<div class="td">Coordination</div>
+		<div class="td"><input type="number" name="attr_coorddice" value="0" /></div>
+		<div class="td"><input type="number" name="attr_coordhard" value="0" /></div>
+		<div class="td"><input type="number" name="attr_coordwiggle" value="0" /></div>
+		<div class="td"><input type="number" name="attr_coordhyper" value="0" /></div>
+		<div class="td"><input type="number" name="attr_coordhhard" value="0"/></div>
+		<div class="td"><input type="number" name="attr_coordhwiggle" value="0" /></div>
+		<div class="td">
+			<input type="number"
+				style="width:37px"
+				name="attr_coordamount"
+				value="(@{coorddice} + @{coordhyper})"
+				disabled="true" />D
+		</div>
+		<div class="td">
+			<input type="number"
+				style="width:37px"
+				name="attr_coordhamount"
+				value="(@{coordhard} + @{coordhhard})"
+				disabled="true" />HD
+		</div>
+		<div class="td">
+			<input type="number"
+				style="width:37px"
+				name="attr_coordwamount"
+				value="(@{coordwiggle} + @{coordhwiggle})"
+				disabled="true" />WD
+		</div>
+		<div class="td">
+			<button type="roll"
+				name="roll_coordoutput"
+				value="/roll (@{coorddice} + @{coordhyper})d10mtsd">
+			</button>
+		</div>
+		<div class="td">
+			<input type="radio" name="attr_statCheck" value="coord">
+		</div>
+	</div>
+	<!-- SENSE -->
+	<div class="tr">
+		<div class="td">Sense</div>
+		<div class="td"><input type="number" name="attr_sensedice" value="0" /></div>
+		<div class="td"><input type="number" name="attr_sensehard" value="0" /></div>
+		<div class="td"><input type="number" name="attr_sensewiggle" value="0" /></div>
+		<div class="td"><input type="number" name="attr_sensehyper" value="0" /></div>
+		<div class="td"><input type="number" name="attr_sensehhard" value="0" /></div>
+		<div class="td"><input type="number" name="attr_sensehwiggle" value="0" /></div>
+		<div class="td">
+			<input type="number"
+				style="width:37px"
+				name="attr_senseamount"
+				value="(@{sensedice} + @{sensehyper})"
+				disabled="true" />D
+		</div>
+		<div class="td">
+			<input type="number"
+				style="width:37px"
+				name="attr_sensehamount"
+				value="(@{sensehard} + @{sensehhard})"
+				disabled="true" />HD
+		</div>
+		<div class="td">
+			<input type="number"
+				style="width:37px"
+				name="attr_sensewamount"
+				value="(@{sensewiggle} + @{sensehwiggle})"
+				disabled="true" />WD
+		</div>
+		<div class="td">
+			<button type="roll" name="roll_senseoutput" value="/roll (@{sensedice} + @{sensehyper})d10mtsd"></button>
+		</div>
+		<div class="td">
+			<input type="radio" name="attr_statCheck" value="sense">
+		</div>
+	</div>
+	<!-- MIND -->
+	<div class="tr">
+		<div class="td">Mind</div>
+		<div class="td"><input type="number" name="attr_minddice" value="0" /></div>
+		<div class="td"><input type="number" name="attr_mindhard" value="0" /></div>
+		<div class="td"><input type="number" name="attr_mindwiggle" value="0" /></div>
+		<div class="td"><input type="number" name="attr_mindhyper" value="0" /></div>
+		<div class="td"><input type="number" name="attr_mindhhard" value="0" /></div>
+		<div class="td"><input type="number" name="attr_mindhwiggle" value="0" /></div>
+		<div class="td">
+			<input type="number"
+				style="width:37px"
+				name="attr_mindamount"
+				value="(@{minddice} + @{mindhyper})"
+				disabled="true" />D
+		</div>
+		<div class="td">
+			<input type="number"
+				style="width:37px"
+				name="attr_mindhamount"
+				value="(@{mindhard} + @{mindhhard})"
+				disabled="true" />HD
+		</div>
+		<div class="td">
+			<input type="number"
+				style="width:37px"
+				name="attr_mindwamount"
+				value="(@{mindwiggle} + @{mindhwiggle})"
+				disabled="true" />WD
+		</div>
+		<div class="td">
+			<button type="roll"
+				name="roll_mindoutput"
+				value="/roll (@{minddice} + @{mindhyper})d10mtsd">
+			</button>
+		</div>
+		<div class="td">
+			<input type="radio" name="attr_statCheck" value="mind">
+		</div>
+	</div>
+	<!-- CHARM -->
+	<div class="tr">
+		<div class="td">Charm</div>
+		<div class="td"><input type="number" name="attr_charmdice" value="0" /></div>
+		<div class="td"><input type="number" name="attr_charmhard" value="0" /></div>
+		<div class="td"><input type="number" name="attr_charmwiggle" value="0" /></div>
+		<div class="td"><input type="number" name="attr_charmhyper" value="0" /></div>
+		<div class="td"><input type="number" name="attr_charmhhard" value="0" /></div>
+		<div class="td"><input type="number" name="attr_charmhwiggle" value="0" /></div>
+		<div class="td">
+			<input type="number"
+				style="width:37px"
+				name="attr_charmamount"
+				value="(@{charmdice} + @{charmhyper})"
+				disabled="true" />D
+		</div>
+		<div class="td">
+			<input type="number"
+				style="width:37px"
+				name="attr_charmhamount"
+				value="(@{charmhard} + @{charmhhard})"
+				disabled="true" />HD
+		</div>
+		<div class="td">
+			<input type="number"
+				style="width:37px"
+				name="attr_charmwamount"
+				value="(@{charmwiggle} + @{charmhwiggle})"
+				disabled="true" />WD
+		</div>
+		<div class="td">
+			<button type="roll"
+				name="roll_charmoutput"
+				value="/roll (@{charmdice} + @{charmhyper})d10mtsd">
+			</button>
+		</div>
+		<div class="td">
+			<input type="radio" name="attr_statCheck" value="charm">
+		</div>
+	</div>
+	<!-- COMMAND -->
+	<div class="tr">
+		<div class="td">Command</div>
+		<div class="td"><input type="number" name="attr_commdice" value="0" /></div>
+		<div class="td"><input type="number" name="attr_commhard" value="0" /></div>
+		<div class="td"><input type="number" name="attr_commwiggle" value="0" /></div>
+		<div class="td"><input type="number" name="attr_commhyper" value="0" /></div>
+		<div class="td"><input type="number" name="attr_commhhard" value="0" /></div>
+		<div class="td"><input type="number" name="attr_commhwiggle" value="0" /></div>
+		<div class="td">
+			<input type="number"
+				style="width:37px"
+				name="attr_commamount"
+				value="(@{commdice} + @{commhyper})"
+				disabled="true" />D           
+		</div>
+		<div class="td">
+			<input type="number"
+				style="width:37px"
+				name="attr_commhamount"
+				value="(@{commhard} + @{commhhard})"
+				disabled="true" />HD           
+		</div>
+		<div class="td">
+			<input type="number"
+				style="width:37px"
+				name="attr_commwamount"
+				value="(@{commwiggle} + @{commhwiggle})"
+				disabled="true" />WD           
+		</div>
+		<div class="td">
+			<button type="roll"
+				name="roll_commoutput"
+				value="/roll (@{commdice} + @{commhyper})d10mtsd">
+			</button>
+		</div>
+		<div class="td">
+			<input type="radio" name="attr_statCheck" value="comm">
+		</div>
+	</div>
+</div>

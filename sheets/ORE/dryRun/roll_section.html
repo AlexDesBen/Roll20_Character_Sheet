@@ -1,0 +1,117 @@
+
+<!-- ROLL MECHANICS -->
+<script type="text/worker">
+	<!-- WORKER FUNCTIONS -->
+	on("change:skillCheck",
+		function() {
+			getSkillRoll();
+		}
+	);
+	on("change:statCheck",
+		function() {
+			getSkillRoll();
+		}
+	);
+	<!-- PURE JAVASCRIPT FUNCTION -->
+	function getSkillRoll() {
+		getAttrs(["statCheck","skillCheck"],
+			function(values) {
+				var stat = String(values.statCheck);
+				var skillNbr = String(values.skillCheck);
+				var d = getDice(stat,skillNbr);
+				var skillName = skillNbr + "name";
+				var output = "";
+				getAttrs([skillName],
+					function(values) {
+						skillName = values[skillName];
+						if (skillName == "") {
+							output = generateRoll(stat,skillNbr,d);
+						} else {
+							output = generateRoll(stat,skillName,d);
+						}
+						setAttrs({statSkillRoll:output});
+						output = "\n/em @{character_name} \nRolls " + output;
+						console.log("End : ",d);
+						setAttrs({statSkillRollMessage:output});
+					}
+				);
+			}
+		);
+	}
+	function getDice(statName,skillNbr) {
+		var output = {"dice":0,"hard":0,"wiggle":0};
+		var statd, skilld, statHd, skillHd;
+		var stathd, skillhd, statHhd, skillHhd;
+		var statwd, skillwd, statHwd, skillHwd;
+		statd = statName + "dice";
+		skilld = skillNbr + "dice";
+		statHd = statName + "hyper";
+		skillHd = skillNbr + "hyper";
+		stathd = statName + "hard";
+		skillhd = skillNbr + "hard";
+		statHhd = statName + "hhard";
+		skillHhd = skillNbr + "hhard"
+		statwd = statName + "wiggle";
+		skillwd = skillNbr + "wiggle";
+		statHwd = statName + "hwiggle";
+		skillHwd = skillNbr + "hwiggle";
+		getAttrs([statd,skilld,statHd,skillHd,
+				  stathd,skillhd,statHhd,skillHhd,
+				  statwd,skillwd,statHwd,skillHwd],
+			function(values) {
+				output.dice += parseInt(values[statd]);
+				output.dice += parseInt(values[skilld]);
+				output.dice += parseInt(values[statHd]);
+				output.dice += parseInt(values[skillHd]);
+				output.hard += parseInt(values[stathd]);
+				output.hard += parseInt(values[skillhd]);
+				output.hard += parseInt(values[statHhd]);
+				output.hard += parseInt(values[skillHhd]);
+				output.wiggle += parseInt(values[statwd]);
+				output.wiggle += parseInt(values[skillwd]);
+				output.wiggle += parseInt(values[statHwd]);
+				output.wiggle += parseInt(values[skillHwd]);
+			}
+		);
+		return output
+	}
+	function generateRoll(stat,skill,d) {
+		return stat + " + " + skill + " = " + d.dice + "d + " + d.hard + "hd + " + d.wiggle + "wd"
+	}
+</script>
+<!-- ROLL LAYOUT -->
+<div class="rolls" style="padding-top: 5px">
+	<a><br></a>
+	<div class="tr">
+		<div class="td" style="width: 150px">
+			<a><b>Selected roll : </b></a>
+		</div>
+		<div class="td" style="width:350px">
+			<input type="text"
+				style="width:350px"
+				readonly
+				name="attr_statSkillRoll"
+				value="@{statSkillRoll}" />
+		</div>
+		<div class="td">
+			<button type="roll"
+				name="act_rollSkill"
+				style="width: 100px"
+				value="@{statSkillRollMessage}">
+			</button>
+		</div>
+		<div class="td">
+			<input type="text"
+				style="width:2px; visibility: hidden;"
+				name="attr_statSkillRollMessage"
+				value="Selected Stat + Skill" />
+		</div>
+	</div>
+</div>
+
+"bodydice",
+"bodyhard",
+"bodywiggle",
+"skill1dice",
+"skill1hard",
+"skill1wiggle",
